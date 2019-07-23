@@ -19,9 +19,13 @@ class FundingRound
 
     def initialize(type, investment, startup, venture_capitalist)
         @type = type
-        @investment = investment
         @startup = startup
         @venture_capitalist = venture_capitalist
+        if investment < 0
+            @investment = 0
+        else
+            @investment = investment
+        end
 
         @@all << self
     end

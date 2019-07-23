@@ -62,7 +62,7 @@ class Startup
 
     #   Startup#investors Returns a **unique** array of all the venture capitalists that have invested in this company
     def investors
-        funding_rounds.map {|funding_round| funding_round.venture_capitalist}
+        funding_rounds.map {|funding_round| funding_round.venture_capitalist}.uniq
     end
     
     #   Startup#big_investors Returns a **unique** array of all the venture capitalists that have invested in this company and are in the Trés Commas club
